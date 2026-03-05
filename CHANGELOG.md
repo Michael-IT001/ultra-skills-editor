@@ -2,6 +2,9 @@
 
 All notable changes to the **Ultra Skills Editor** will be documented in this file.
 
+## [1.8.5] - 2026-03-06
+- 📝 **Documentation Layout**: Moved the `How to Open the Editor` section to the very top of `README.md` (before Highlights) so that users immediately know where to click after installation.
+
 ## [1.8.4] - 2026-03-06
 - 📝 **Documentation**: Clearly outlined how new users can locate and open the Skills Editor panel (via the Status Bar, Command Palette, or Right-Click menu) in `README.md`.
 
