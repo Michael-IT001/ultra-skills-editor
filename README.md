@@ -57,10 +57,11 @@ The extension **automatically detects** your editor's display language on first 
 3. Click the "..." menu and select **"Install from VSIX..."**.
 4. Select the downloaded file and reload the window.
 
-### First Use
-1. After installation, look for the **Skills** button in the bottom status bar.
-2. Click it to open the Skills Editor panel.
-3. Start creating your first skill!
+### 💡 How to Open the Editor
+There are **3 easy ways** to launch the Ultra Skills Editor:
+1. **Status Bar (Recommended)**: Look at the bottom right of your IDE's status bar for a button with a wrench icon `🔧` and the text `Ultra Skills Editor` (or `我的技能` if in Chinese). Click it to instantly open the main panel!
+2. **Right-Click Menu**: Right-click on any `.md` file or folder in the VS Code/Cursor File Explorer and select **"Import as Skill / 导入为技能"**. This will open the editor and automatically import your target file.
+3. **Command Palette**: Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac) to open the Command Palette, type `Open Skills Editor`, and hit Enter.
 
 ---
 

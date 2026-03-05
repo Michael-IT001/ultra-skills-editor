@@ -2,6 +2,9 @@
 
 All notable changes to the **Ultra Skills Editor** will be documented in this file.
 
+## [1.8.4] - 2026-03-06
+- 📝 **Documentation**: Clearly outlined how new users can locate and open the Skills Editor panel (via the Status Bar, Command Palette, or Right-Click menu) in `README.md`.
+
 ## [1.8.3] - 2026-03-06
 - 🐛 **Bug Fix**: Fixed a visual issue where the VS Code/Cursor status bar item text wouldn't instantly update when switching languages inside the extension UI.
 
