@@ -2,6 +2,14 @@
 
 All notable changes to the **Ultra Skills Editor** will be documented in this file.
 
+## [1.8.0] - 2026-03-05
+- 🎉 **Rebranded to Ultra Skills Editor**: Renamed to better reflect its universal support for both Antigravity and Cursor IDEs!
+- 🚀 **Dual IDE Support**: Intelligent environment detection natively routes to `~/.cursor/skills` (Cursor) or `~/.antigravity/skills` (Antigravity).
+- ✨ **Context Menu Magic**: Right-clicking any skill in the sidebar now opens a custom Context Menu.
+- ✏️ **Skill Renaming**: The new Context Menu allows you to quickly rename skills directly from the IDE UI without opening the file explorer.
+- 🐛 **Bug Fix**: Fixed a critical bug where the UI would get stuck on "Loading..." due to unescaped unicode characters in Webview injections.
+
+
 ## [1.1.0] - 2026-02-27
 - ✨ **Drag-and-Drop Reordering**: Introduced a new feature to manually reorder skills by dragging and dropping items in the sidebar.
 - 💾 **Persistent Order**: Custom skill order is now saved and persisted across sessions.
