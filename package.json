@@ -3,7 +3,7 @@
 	"displayName": "Ultra Skills Editor",
 	"description": "A powerful, multi-language skills management plugin for AI Agents. Create, edit, import, and delete your AI skills with ease.",
 	"publisher": "Michael-IT001",
-	"version": "1.8.1",
+	"version": "1.8.0",
 	"icon": "media/icon.png",
 	"engines": {
 		"vscode": "^1.60.0"

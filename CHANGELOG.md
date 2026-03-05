@@ -2,7 +2,7 @@
 
 All notable changes to the **Ultra Skills Editor** will be documented in this file.
 
-## [1.8.1] - 2026-03-05
+## [1.8.0] - 2026-03-05
 - 🎉 **Rebranded to Ultra Skills Editor**: Renamed to better reflect its universal support for both Antigravity and Cursor IDEs!
 - 🚀 **Dual IDE Support**: Intelligent environment detection natively routes to `~/.cursor/skills` (Cursor) or `~/.antigravity/skills` (Antigravity).
 - ✨ **Context Menu Magic**: Right-clicking any skill in the sidebar now opens a custom Context Menu.
