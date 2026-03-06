@@ -3,6 +3,9 @@
 All notable changes to the **Ultra Skills Editor** will be documented in this file.
 
 
+## [1.8.7] - 2026-03-07
+- 📝 **Pro Tip**: Explicitly added `Shift + Drag` instructions to the main introduction and "How to Open" sections in the documentation so that it's physically impossible for users to miss it! 😆
+
 ## [1.8.6] - 2026-03-07
 - 📝 **Documentation**: Added clear instructions for the **Shift + Drag-and-Drop** import method in `README.md`.
 - 💡 **Help Tip**: Clarified that holding Shift is necessary to prevent Cursor/Antigravity from intercepting the drop as a regular file open.

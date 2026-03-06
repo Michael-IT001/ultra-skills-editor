@@ -1,7 +1,7 @@
 # 🧠 Ultra Skills Editor
 
 > A beautifully crafted, multi-language skills management extension for Antigravity & Cursor.  
-> Create, edit, import, and organize your AI skills — all from a single, elegant panel.
+> Create, edit, import (via **Shift + Drag**), and organize your AI skills — all from a single, elegant panel.
 
 ---
 
@@ -10,6 +10,9 @@ There are **3 easy ways** to launch the Ultra Skills Editor:
 1. **Status Bar (Recommended)**: Look at the bottom right of your IDE's status bar for a button with a wrench icon `🔧` and the text `Ultra Skills Editor` (or `我的技能` if in Chinese). Click it to instantly open the main panel!
 2. **Right-Click Menu**: Right-click on any `.md` file or folder in the VS Code/Cursor File Explorer and select **"Import as Skill / 导入为技能"**. This will open the editor and automatically import your target file.
 3. **Command Palette**: Press `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (Mac) to open the Command Palette, type `Open Skills Editor`, and hit Enter.
+
+> 💡 **PRO TIP: Shift + Drag to Import**  
+> Once the editor is open, you can **hold down the `Shift` key** and drag `.md` files or folders directly from your computer into the panel to import them! *(Holding Shift is required to prevent the IDE from intercepting the file)*.
 
 ---
 
