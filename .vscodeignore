@@ -1,0 +1,12 @@
+.git
+.gitignore
+.vscode
+.github
+.DS_Store
+**/*.vsix
+**/*.map
+node_modules
+test
+tests
+coverage
+.env
