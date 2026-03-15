@@ -2,7 +2,7 @@
 - **External File Drop Overlay No Longer Gets Stuck**: Reworked the webview’s external file-drag overlay cleanup so the blue drop frame is cleared consistently on drop, drag cancellation, blur, hidden visibility, Escape, and ordinary pointer clicks instead of relying on a narrow set of exit events.
 
 ## v2.7.26
-- **Header Icons Raised To A Clearly Visible 18px**: Increased the top header icon size from 17px to 18px so the change is visibly stronger than the prior build while keeping the same crisp rendering, gray-frame interactions, and compact-layout behavior. 11
+- **Header Icons Raised To A Clearly Visible 18px**: Increased the top header icon size from 17px to 18px so the change is visibly stronger than the prior build while keeping the same crisp rendering, gray-frame interactions, and compact-layout behavior.
 
 ## v2.7.25
 - **Header Icons Enlarged And De-Blurred**: Removed the fractional translate/scale adjustments from the top header icons so they render crisply again, then increased their header-only size slightly for a cleaner, larger appearance without changing the surrounding interactions.
