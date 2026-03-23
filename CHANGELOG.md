@@ -1,3 +1,8 @@
+## v2.8.5
+- **Cursor Migration Wizard**: Added a one-click migration tool for users moving from Cursor to Antigravity. Automatically synchronizes extensions, themes, and MCP configurations (Pencil/Cline).
+- **Automatic Skill Discovery**: Antigravity users can now see their `.cursor/skills` folder directly in the sidebar without manual import.
+- **Antigravity Branding**: Updated extension display name and internal metadata for native Antigravity support.
+
 ## v2.8.4
 - **Routine Maintenance**: General performance optimizations, stability improvements, and documentation updates.
 

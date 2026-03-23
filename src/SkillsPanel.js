@@ -158,6 +158,7 @@ class SkillsPanel {
                         else if (choice && choice.title === this._i18n.dontSaveBtn) { this._panel.webview.postMessage({ command: 'switchApproved', save: false }); }
                     });
                     return;
+                case 'migrateFromCursor': this._migrateFromCursor(); return;
             }
         }, null, this._disposables);
     }
@@ -229,14 +230,14 @@ class SkillsPanel {
                 projectCandidates: ['.agents/skills', '.github/skills', '.github/prompts']
             },
             'ultra': {
-                globalCandidates: ['.gemini/antigravity/skills', '.antigravity/skills'],
+                globalCandidates: ['.gemini/antigravity/skills', '.antigravity/skills', '.cursor/skills'],
                 projectDir: '.agents/skills',
-                projectCandidates: ['.agents/skills', '.agent/skills', 'skills', 'antigravity_skills']
+                projectCandidates: ['.agents/skills', '.agent/skills', 'skills', 'antigravity_skills', '.cursor/skills']
             },
             'antigravity': {
-                globalCandidates: ['.gemini/antigravity/skills', '.antigravity/skills'],
+                globalCandidates: ['.gemini/antigravity/skills', '.antigravity/skills', '.cursor/skills'],
                 projectDir: '.agents/skills',
-                projectCandidates: ['.agents/skills', '.agent/skills', 'skills', 'antigravity_skills']
+                projectCandidates: ['.agents/skills', '.agent/skills', 'skills', 'antigravity_skills', '.cursor/skills']
             }
         };
         const ide = this._detectIDE();
@@ -245,6 +246,43 @@ class SkillsPanel {
             if (fs.existsSync(legacyDir) && !fs.existsSync(path.join(os.homedir(), '.ultra-skills'))) return map['antigravity'];
         }
         return map[ide] || map['antigravity'];
+    }
+
+    async _migrateFromCursor() {
+        const t = this._i18n;
+        const confirm = await vscode.window.showWarningMessage(t.migrateMsg, { modal: true }, t.confirmAction);
+        if (confirm !== t.confirmAction) return;
+
+        try {
+            const cursorExt = path.join(os.homedir(), '.cursor', 'extensions');
+            const antiExt = path.join(os.homedir(), '.antigravity', 'extensions');
+            const cp = require('child_process');
+
+            if (fs.existsSync(cursorExt)) {
+                // Copy extensions
+                cp.execSync(`cp -R "${cursorExt}/"* "${antiExt}/" 2>/dev/null || true`);
+                
+                // Update extensions.json
+                const extJson = path.join(antiExt, 'extensions.json');
+                if (fs.existsSync(extJson)) {
+                    let text = fs.readFileSync(extJson, 'utf8');
+                    text = text.replace(/\.cursor\/extensions/g, '.antigravity/extensions');
+                    fs.writeFileSync(extJson, text);
+                }
+            }
+
+            // Update MCP Config for Pencil
+            const antiMcp = path.join(os.homedir(), '.gemini', 'antigravity', 'mcp_config.json');
+            if (fs.existsSync(antiMcp)) {
+                let text = fs.readFileSync(antiMcp, 'utf8');
+                text = text.replace(/\.cursor\/extensions/g, '.antigravity/extensions');
+                fs.writeFileSync(antiMcp, text);
+            }
+
+            vscode.window.showInformationMessage(t.migrateSuccess + " " + t.migrateRestart, { modal: true });
+        } catch (err) {
+            vscode.window.showErrorMessage(t.migrateFailed.replace('{0}', err.message));
+        }
     }
 
     _resolveGlobalSkillDirs(idePaths) {
@@ -1826,8 +1864,10 @@ class SkillsPanel {
                         .editor-header { padding: 0 12px; }
                         .save-btn span { display: none; }
                         .save-btn { width: 32px; padding: 0; gap: 0; }
-
                     }
+                    .migrate-btn { display: none; align-items: center; justify-content: center; padding: 0 8px; height: 24px; font-size: 11px; background: var(--vscode-button-secondaryBackground, #3a3d41); color: var(--vscode-button-secondaryForeground, #ffffff); border: none; border-radius: 4px; cursor: pointer; transition: opacity 0.2s; margin-left: auto; margin-right: 8px; }
+                    .migrate-btn:hover { background: var(--vscode-button-secondaryHoverBackground, #45494e); }
+                    .migrate-btn.active { display: flex; }
                 </style>
             </head>
             <body>
@@ -1840,6 +1880,10 @@ class SkillsPanel {
                             </button>
                             <button class="add-btn" id="clearBtn" title="${t.clearCart}" style="display:none; color: var(--vscode-errorForeground);">
                                 <svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0 13a6 6 0 1 1 0-12 6 6 0 0 1 0 12z"/><path d="M11.35 4.65a.5.5 0 0 0-.7-.7l-6 6a.5.5 0 0 0 .7.7l6-6z"/></svg>
+                            </button>
+                            <button class="migrate-btn ${this._detectIDE().includes('antigravity') || this._detectIDE() === 'ultra' ? 'active' : ''}" id="migrateBtn" title="${t.migrateBtn}">
+                                <svg style="width: 14px; height: 14px; margin-right:4px;" class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M12.91 8.24l-3.23-3.23V7H2v2h7.68v2l3.23-3.23zM7.5 1h7v13h-7v-3H9v2h4V2H9v2H7.5V1z"/></svg>
+                                <span>${t.migrateBtn}</span>
                             </button>
                             <button class="add-btn" id="smartGroupBtn" data-header-icon="smart-group" title="${t.smartGroup || 'Smart Group'}">
                                 <svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path fill="currentColor" d="M14 4H9.618l-1-2H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1zm0 9H2V5h12v8z"/><path fill="currentColor" d="M10.5 6.5l.75 1.5 1.5.75-1.5.75-.75 1.5-.75-1.5-1.5-.75 1.5-.75zM6.5 9l.5 1 1 .5-1 .5-.5 1-.5-1-1-.5 1-.5z"/></svg>
@@ -2109,6 +2153,7 @@ class SkillsPanel {
 	                    const filterTabs = document.getElementById('filterTabs');
 	                    const langSelect = document.getElementById('langSelect');
 	                    const importBtn = document.getElementById('importBtn');
+                        const migrateBtn = document.getElementById('migrateBtn');
                         const headerActionButtons = Array.from(document.querySelectorAll('.header-actions .add-btn[data-header-icon]'));
                         const sidebarEl = document.getElementById('sidebar');
                     const dropLineIndicator = document.createElement('div');
@@ -3393,6 +3438,9 @@ class SkillsPanel {
                     // Import button
                     if (importBtn) {
                         importBtn.addEventListener('click', () => { vscode.postMessage({ command: 'importSkills' }); });
+                    }
+                    if (migrateBtn) {
+                        migrateBtn.addEventListener('click', () => { vscode.postMessage({ command: 'migrateFromCursor' }); });
                     }
 
                     // Confirm modal

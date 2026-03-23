@@ -134,7 +134,13 @@ const translations = {
             "smart.security": "Security",
             "smart.collab": "Collaboration",
             "smart.utilities": "Utilities"
-        }
+        },
+        migrateBtn: "Migrate from Cursor",
+        migrateTitle: "Migration Wizard",
+        migrateMsg: "Would you like to migrate all your extensions, themes, and MCP tools from Cursor to Antigravity? This will copy your Cursor plugins to the Antigravity folder and register them.",
+        migrateSuccess: "Migration successful! Extensions and tools have been copied.",
+        migrateFailed: "Migration failed: {0}",
+        migrateRestart: "Please restart Antigravity to apply the changes."
     },
     'zh-cn': {
         name: "🇨🇳 简体中文",
@@ -270,7 +276,13 @@ const translations = {
             "smart.security": "安全审计",
             "smart.collab": "协作沟通",
             "smart.utilities": "工具脚本"
-        }
+        },
+        migrateBtn: "从 Cursor 迁移插件",
+        migrateTitle: "迁移向导",
+        migrateMsg: "是否要将 Cursor 中的所有插件（Cline/MCP等）和配置迁移到 Antigravity？这会将插件同步并注册到新环境中。",
+        migrateSuccess: "迁移成功！插件和配置已同步。",
+        migrateFailed: "迁移失败：{0}",
+        migrateRestart: "请立即完全重启一次 Antigravity 以使插件生效。"
     },
     'zh-tw': {
         name: "🇹🇼 繁體中文",
