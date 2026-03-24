@@ -7,6 +7,9 @@
 ## v2.8.2
 - **Import Path Fix**: Fixed an issue where newly imported/created global skills were still saved to the legacy path (`~/.antigravity/skills/`) instead of the new standard path (`~/.gemini/antigravity/skills/`). The new path is now always used for writes, while legacy paths remain scannable for reading existing skills.
 
+## v2.8.8
+- **UI Reversion**: Reverted the UI title and status bar text back to "My Skills / 我的技能" while keeping the extension display name as "Ultra Skills Editor".
+
 ## v2.8.7
 - **Name Correction**: Reverted the extension display name to "Ultra Skills Editor" and updated command titles for consistency.
 - **Skill Discovery Fix**: Enhanced skill discovery logic to support both folder-based (SKILL.md) and standalone (.md/.mdc) skills.

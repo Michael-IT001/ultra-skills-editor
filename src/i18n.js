@@ -1,7 +1,7 @@
 const translations = {
     'en': {
         name: "🇺🇸 English",
-        title: "Ultra Skills Editor",
+        title: "My Skills",
         empty: "Loading your skills...",
         noSkills: "No skills found. Click + to create one.",
         create: "Create New Skill",
@@ -138,7 +138,7 @@ const translations = {
     },
     'zh-cn': {
         name: "🇨🇳 简体中文",
-        title: "Ultra Skills Editor",
+        title: "我的技能",
         empty: "正在加载您的技能...",
         noSkills: "未找到技能。点击 + 号创建一个。",
         create: "创建新技能",
@@ -280,7 +280,7 @@ const translations = {
     },
     'zh-tw': {
         name: "🇹🇼 繁體中文",
-        title: "Ultra Skills Editor",
+        title: "我的技能",
         empty: "正在載入您的技能...",
         noSkills: "未找到技能。點擊 + 建立。",
         create: "建立新技能",
