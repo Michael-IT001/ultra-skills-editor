@@ -101,6 +101,10 @@ const translations = {
         dissolveGroupMsg: "All skills in this group will be moved out and the group will be removed.",
         dissolveGroupsTitle: "Dissolve Groups",
         dissolveGroupsMsg: "All skills in these groups will be moved out and the groups will be removed.",
+        deleteGroupMsg: "Are you sure you want to completely delete this group and ALL its skills? This cannot be undone.",
+        deleteGroupsMsg: "Are you sure you want to completely delete these groups and ALL their skills? This cannot be undone.",
+        deleteSkillsConfirmTitle: "Delete Skills",
+        deleteSkillsMsg: "Are you sure you want to permanently delete these {0} skills? This cannot be undone.",
         newGroupBtn: "New Group",
         newGroupTitle: "New Group",
         newGroupPlaceholder: "Enter group name",
@@ -126,13 +130,21 @@ const translations = {
             "Ungrouped": "Ungrouped",
             "smart.frontend": "Frontend",
             "smart.backend": "Backend",
+            "smart.mobile": "Mobile",
+            "smart.data": "Data",
+            "smart.database": "Database",
             "smart.devops": "DevOps",
             "smart.ai": "AI",
             "smart.testing": "Testing",
             "smart.design": "Design",
             "smart.docs": "Docs",
+            "smart.automation": "Automation",
             "smart.security": "Security",
             "smart.collab": "Collaboration",
+            "smart.product": "Product",
+            "smart.research": "Research",
+            "smart.localization": "Localization",
+            "smart.business": "Business",
             "smart.utilities": "Utilities"
         }
     },
@@ -237,6 +249,10 @@ const translations = {
         dissolveGroupMsg: "分组内的技能将全部移出，分组随后移除。",
         dissolveGroupsTitle: "拆散分组",
         dissolveGroupsMsg: "所选分组内的技能将全部移出，分组随后移除。",
+        deleteGroupMsg: "您确定要彻底删除该分组及其包含的所有技能吗？此操作无法撤销。",
+        deleteGroupsMsg: "您确定要彻底删除这些分组及其包含的所有技能吗？此操作无法撤销。",
+        deleteSkillsConfirmTitle: "批量删除技能",
+        deleteSkillsMsg: "您确定要永久删除这 {0} 个技能吗？此操作无法撤销。",
         newGroupBtn: "新建分组",
         newGroupTitle: "新建分组",
         newGroupPlaceholder: "输入分组名称",
@@ -262,13 +278,21 @@ const translations = {
             "Ungrouped": "未分组",
             "smart.frontend": "前端开发",
             "smart.backend": "后端服务",
+            "smart.mobile": "移动开发",
+            "smart.data": "数据分析",
+            "smart.database": "数据库",
             "smart.devops": "运维部署",
             "smart.ai": "人工智能",
             "smart.testing": "测试质量",
             "smart.design": "设计视觉",
             "smart.docs": "文档写作",
+            "smart.automation": "自动化流程",
             "smart.security": "安全审计",
             "smart.collab": "协作沟通",
+            "smart.product": "产品规划",
+            "smart.research": "研究分析",
+            "smart.localization": "本地化翻译",
+            "smart.business": "商业增长",
             "smart.utilities": "工具脚本"
         },
         migrateBtn: "从 Cursor 迁移插件",
@@ -379,6 +403,10 @@ const translations = {
         dissolveGroupMsg: "分組內的技能將全部移出，分組隨後移除。",
         dissolveGroupsTitle: "拆散分組",
         dissolveGroupsMsg: "所選分組內的技能將全部移出，分組隨後移除。",
+        deleteGroupMsg: "您確定要徹底刪除該分組及其包含的所有技能嗎？此操作無法撤銷。",
+        deleteGroupsMsg: "您確定要徹底刪除這些分組及其包含的所有技能嗎？此操作無法撤銷。",
+        deleteSkillsConfirmTitle: "批次刪除技能",
+        deleteSkillsMsg: "您確定要永久刪除這 {0} 個技能嗎？此操作無法撤銷。",
         newGroupBtn: "新建分組",
         newGroupTitle: "新建分組",
         newGroupPlaceholder: "輸入分組名稱",
@@ -389,13 +417,21 @@ const translations = {
             "Ungrouped": "未分組",
             "smart.frontend": "前端開發",
             "smart.backend": "後端服務",
+            "smart.mobile": "行動開發",
+            "smart.data": "數據分析",
+            "smart.database": "資料庫",
             "smart.devops": "維運部署",
             "smart.ai": "人工智慧",
             "smart.testing": "測試品質",
             "smart.design": "設計視覺",
             "smart.docs": "文件寫作",
+            "smart.automation": "自動化流程",
             "smart.security": "安全審計",
             "smart.collab": "協作溝通",
+            "smart.product": "產品規劃",
+            "smart.research": "研究分析",
+            "smart.localization": "在地化翻譯",
+            "smart.business": "商業增長",
             "smart.utilities": "工具腳本"
         }
     },
@@ -1923,5 +1959,130 @@ const translations = {
         }
     }
 };
+
+const localeGroupUiDefaults = {
+    'ja': {
+        groupSelectLabel: "既存のグループを選択するか、新しいグループ名を入力してください：",
+        groupCustomOption: "カスタムグループ",
+        deleteGroupMsg: "このグループと含まれるすべてのスキルを完全に削除してもよろしいですか？この操作は元に戻せません。",
+        deleteGroupsMsg: "これらのグループと含まれるすべてのスキルを完全に削除してもよろしいですか？この操作は元に戻せません。",
+        deleteSkillsConfirmTitle: "スキルを削除",
+        deleteSkillsMsg: "これら {0} 件のスキルを完全に削除してもよろしいですか？この操作は元に戻せません。"
+    },
+    'de': {
+        groupSelectLabel: "Wählen Sie eine vorhandene Gruppe oder geben Sie einen neuen Gruppennamen ein:",
+        groupCustomOption: "Benutzerdefinierte Gruppe",
+        deleteGroupMsg: "Möchten Sie diese Gruppe und ALLE enthaltenen Skills wirklich vollständig löschen? Dies kann nicht rückgängig gemacht werden.",
+        deleteGroupsMsg: "Möchten Sie diese Gruppen und ALLE enthaltenen Skills wirklich vollständig löschen? Dies kann nicht rückgängig gemacht werden.",
+        deleteSkillsConfirmTitle: "Skills löschen",
+        deleteSkillsMsg: "Möchten Sie diese {0} Skills wirklich dauerhaft löschen? Dies kann nicht rückgängig gemacht werden."
+    },
+    'es': {
+        groupSelectLabel: "Elige un grupo existente o escribe un nombre de grupo nuevo:",
+        groupCustomOption: "Grupo personalizado",
+        deleteGroupMsg: "¿Seguro que quieres eliminar por completo este grupo y TODAS las habilidades que contiene? Esta acción no se puede deshacer.",
+        deleteGroupsMsg: "¿Seguro que quieres eliminar por completo estos grupos y TODAS las habilidades que contienen? Esta acción no se puede deshacer.",
+        deleteSkillsConfirmTitle: "Eliminar habilidades",
+        deleteSkillsMsg: "¿Seguro que quieres eliminar permanentemente estas {0} habilidades? Esta acción no se puede deshacer."
+    },
+    'fr': {
+        groupSelectLabel: "Choisissez un groupe existant ou saisissez un nouveau nom de groupe :",
+        groupCustomOption: "Groupe personnalisé",
+        deleteGroupMsg: "Voulez-vous vraiment supprimer complètement ce groupe et TOUTES les compétences qu'il contient ? Cette action est irréversible.",
+        deleteGroupsMsg: "Voulez-vous vraiment supprimer complètement ces groupes et TOUTES les compétences qu'ils contiennent ? Cette action est irréversible.",
+        deleteSkillsConfirmTitle: "Supprimer des compétences",
+        deleteSkillsMsg: "Voulez-vous vraiment supprimer définitivement ces {0} compétences ? Cette action est irréversible."
+    },
+    'it': {
+        groupSelectLabel: "Scegli un gruppo esistente oppure inserisci un nuovo nome di gruppo:",
+        groupCustomOption: "Gruppo personalizzato",
+        deleteGroupMsg: "Vuoi davvero eliminare completamente questo gruppo e TUTTE le skill che contiene? Questa azione non può essere annullata.",
+        deleteGroupsMsg: "Vuoi davvero eliminare completamente questi gruppi e TUTTE le skill che contengono? Questa azione non può essere annullata.",
+        deleteSkillsConfirmTitle: "Elimina skill",
+        deleteSkillsMsg: "Vuoi davvero eliminare definitivamente queste {0} skill? Questa azione non può essere annullata."
+    },
+    'ko': {
+        groupSelectLabel: "기존 그룹을 선택하거나 새 그룹 이름을 입력하세요:",
+        groupCustomOption: "사용자 지정 그룹",
+        deleteGroupMsg: "이 그룹과 그 안의 모든 스킬을 완전히 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.",
+        deleteGroupsMsg: "이 그룹들과 그 안의 모든 스킬을 완전히 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.",
+        deleteSkillsConfirmTitle: "스킬 삭제",
+        deleteSkillsMsg: "이 {0}개의 스킬을 영구적으로 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다."
+    },
+    'pt-br': {
+        groupSelectLabel: "Escolha um grupo existente ou digite um novo nome de grupo:",
+        groupCustomOption: "Grupo personalizado",
+        deleteGroupMsg: "Tem certeza de que deseja excluir completamente este grupo e TODAS as habilidades dentro dele? Esta ação não pode ser desfeita.",
+        deleteGroupsMsg: "Tem certeza de que deseja excluir completamente estes grupos e TODAS as habilidades dentro deles? Esta ação não pode ser desfeita.",
+        deleteSkillsConfirmTitle: "Excluir habilidades",
+        deleteSkillsMsg: "Tem certeza de que deseja excluir permanentemente estas {0} habilidades? Esta ação não pode ser desfeita."
+    },
+    'ru': {
+        groupSelectLabel: "Выберите существующую группу или введите название новой:",
+        groupCustomOption: "Своя группа",
+        deleteGroupMsg: "Вы действительно хотите полностью удалить эту группу и ВСЕ навыки внутри неё? Это действие нельзя отменить.",
+        deleteGroupsMsg: "Вы действительно хотите полностью удалить эти группы и ВСЕ навыки внутри них? Это действие нельзя отменить.",
+        deleteSkillsConfirmTitle: "Удалить навыки",
+        deleteSkillsMsg: "Вы действительно хотите навсегда удалить эти {0} навыков? Это действие нельзя отменить."
+    },
+    'tr': {
+        groupSelectLabel: "Mevcut bir grubu seçin veya yeni bir grup adı girin:",
+        groupCustomOption: "Özel grup",
+        deleteGroupMsg: "Bu grubu ve içindeki TÜM yetenekleri tamamen silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+        deleteGroupsMsg: "Bu grupları ve içlerindeki TÜM yetenekleri tamamen silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+        deleteSkillsConfirmTitle: "Yetenekleri sil",
+        deleteSkillsMsg: "Bu {0} yeteneği kalıcı olarak silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+    },
+    'pl': {
+        groupSelectLabel: "Wybierz istniejącą grupę albo wpisz nazwę nowej:",
+        groupCustomOption: "Grupa niestandardowa",
+        deleteGroupMsg: "Czy na pewno chcesz całkowicie usunąć tę grupę i WSZYSTKIE znajdujące się w niej umiejętności? Tego działania nie można cofnąć.",
+        deleteGroupsMsg: "Czy na pewno chcesz całkowicie usunąć te grupy i WSZYSTKIE znajdujące się w nich umiejętności? Tego działania nie można cofnąć.",
+        deleteSkillsConfirmTitle: "Usuń umiejętności",
+        deleteSkillsMsg: "Czy na pewno chcesz trwale usunąć te {0} umiejętności? Tego działania nie można cofnąć."
+    },
+    'cs': {
+        groupSelectLabel: "Vyberte existující skupinu nebo zadejte nový název skupiny:",
+        groupCustomOption: "Vlastní skupina",
+        deleteGroupMsg: "Opravdu chcete úplně smazat tuto skupinu a VŠECHNY dovednosti, které obsahuje? Tuto akci nelze vrátit zpět.",
+        deleteGroupsMsg: "Opravdu chcete úplně smazat tyto skupiny a VŠECHNY dovednosti, které obsahují? Tuto akci nelze vrátit zpět.",
+        deleteSkillsConfirmTitle: "Smazat dovednosti",
+        deleteSkillsMsg: "Opravdu chcete trvale smazat těchto {0} dovedností? Tuto akci nelze vrátit zpět."
+    },
+    'ar': {
+        groupSelectLabel: "اختر مجموعة موجودة أو أدخل اسم مجموعة جديدة:",
+        groupCustomOption: "مجموعة مخصصة",
+        deleteGroupMsg: "هل أنت متأكد من أنك تريد حذف هذه المجموعة وكل المهارات الموجودة داخلها نهائيًا؟ لا يمكن التراجع عن هذا الإجراء.",
+        deleteGroupsMsg: "هل أنت متأكد من أنك تريد حذف هذه المجموعات وكل المهارات الموجودة داخلها نهائيًا؟ لا يمكن التراجع عن هذا الإجراء.",
+        deleteSkillsConfirmTitle: "حذف المهارات",
+        deleteSkillsMsg: "هل أنت متأكد من أنك تريد حذف هذه المهارات وعددها {0} نهائيًا؟ لا يمكن التراجع عن هذا الإجراء."
+    },
+    'vi': {
+        groupSelectLabel: "Chọn một nhóm có sẵn hoặc nhập tên nhóm mới:",
+        groupCustomOption: "Nhóm tùy chỉnh",
+        deleteGroupMsg: "Bạn có chắc muốn xóa hoàn toàn nhóm này và TOÀN BỘ kỹ năng trong đó không? Hành động này không thể hoàn tác.",
+        deleteGroupsMsg: "Bạn có chắc muốn xóa hoàn toàn các nhóm này và TOÀN BỘ kỹ năng trong đó không? Hành động này không thể hoàn tác.",
+        deleteSkillsConfirmTitle: "Xóa kỹ năng",
+        deleteSkillsMsg: "Bạn có chắc muốn xóa vĩnh viễn {0} kỹ năng này không? Hành động này không thể hoàn tác."
+    }
+};
+
+Object.keys(translations).forEach((lang) => {
+    const locale = translations[lang];
+    if (!locale) return;
+    const derivedDefaults = {};
+    if (!locale.ungrouped && locale.groupLabels && locale.groupLabels.Ungrouped) {
+        derivedDefaults.ungrouped = locale.groupLabels.Ungrouped;
+    }
+    if (!locale.newGroupTitle && locale.newGroupBtn) {
+        derivedDefaults.newGroupTitle = locale.newGroupBtn;
+    }
+    if (!locale.newGroupPlaceholder && locale.groupInputPlaceholder) {
+        derivedDefaults.newGroupPlaceholder = locale.groupInputPlaceholder;
+    } else if (!locale.newGroupPlaceholder && locale.renameGroupPlaceholder) {
+        derivedDefaults.newGroupPlaceholder = locale.renameGroupPlaceholder;
+    }
+    Object.assign(locale, derivedDefaults, localeGroupUiDefaults[lang] || {});
+});
 
 module.exports = translations;

@@ -37,12 +37,22 @@ class SkillsPanel {
         'backend': 'smart.backend',
         '后端服务': 'smart.backend',
         '後端服務': 'smart.backend',
+        'mobile': 'smart.mobile',
+        '移动开发': 'smart.mobile',
+        '行動開發': 'smart.mobile',
         'devops': 'smart.devops',
         '运维部署': 'smart.devops',
         '維運部署': 'smart.devops',
         'ai': 'smart.ai',
         '人工智能': 'smart.ai',
         '人工智慧': 'smart.ai',
+        'data': 'smart.data',
+        '数据分析': 'smart.data',
+        '數據分析': 'smart.data',
+        'database': 'smart.database',
+        'databases': 'smart.database',
+        '数据库': 'smart.database',
+        '資料庫': 'smart.database',
         'testing': 'smart.testing',
         '测试质量': 'smart.testing',
         '測試品質': 'smart.testing',
@@ -52,6 +62,10 @@ class SkillsPanel {
         'docs': 'smart.docs',
         '文档写作': 'smart.docs',
         '文件寫作': 'smart.docs',
+        'automation': 'smart.automation',
+        'workflow automation': 'smart.automation',
+        '自动化流程': 'smart.automation',
+        '自動化流程': 'smart.automation',
         'utilities': 'smart.utilities',
         '工具脚本': 'smart.utilities',
         '工具腳本': 'smart.utilities',
@@ -61,7 +75,24 @@ class SkillsPanel {
         'collaboration': 'smart.collab',
         'collab': 'smart.collab',
         '协作沟通': 'smart.collab',
-        '協作溝通': 'smart.collab'
+        '協作溝通': 'smart.collab',
+        'product': 'smart.product',
+        'prd': 'smart.product',
+        '产品规划': 'smart.product',
+        '產品規劃': 'smart.product',
+        'research': 'smart.research',
+        '研究分析': 'smart.research',
+        'localization': 'smart.localization',
+        'translation': 'smart.localization',
+        'i18n': 'smart.localization',
+        'l10n': 'smart.localization',
+        '本地化': 'smart.localization',
+        '在地化': 'smart.localization',
+        'business': 'smart.business',
+        'marketing': 'smart.business',
+        'business ops': 'smart.business',
+        '商业增长': 'smart.business',
+        '商業增長': 'smart.business'
     };
 
     static createOrShow(context) {
@@ -1777,7 +1808,7 @@ class SkillsPanel {
                     .save-btn.preview-active:hover { background-color: var(--vscode-button-hoverBackground) !important; }
                     .save-btn.destructive { background-color: var(--vscode-errorForeground); color: #fff; }
                     .editor-container { flex: 1; position: relative; display: flex; flex-direction: column; overflow: hidden; }
-                    textarea { flex: 1; width: 100%; height: 100%; background-color: transparent; color: var(--vscode-editor-foreground); border: none; padding: 16px 20px; font-family: var(--vscode-editor-font-family, 'Menlo', 'Monaco', 'Courier New', monospace); font-size: var(--vscode-editor-font-size, 13px); line-height: 1.6; resize: none; outline: none; white-space: pre; overflow-wrap: normal; overflow-x: auto; text-rendering: optimizeLegibility; font-kerning: normal; font-variant-ligatures: none; }
+                    textarea { flex: 1; width: 100%; height: 100%; background-color: transparent; color: var(--vscode-editor-foreground); border: none; --editor-pad-x: max(28px, calc(50% - 428px)); padding: 32px var(--editor-pad-x); box-sizing: border-box; font-family: var(--vscode-editor-font-family, 'Menlo', 'Monaco', 'Courier New', monospace); font-size: var(--vscode-editor-font-size, 13px); line-height: 1.8; letter-spacing: 0.3px; resize: none; outline: none; white-space: pre-wrap; overflow-wrap: break-word; word-break: break-all; word-wrap: break-word; overflow-x: hidden; scrollbar-gutter: stable both-edges; text-rendering: optimizeLegibility; font-kerning: normal; font-variant-ligatures: none; }
                     textarea::selection { background-color: var(--vscode-editor-selectionBackground); }
                     .empty-state { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100%; color: var(--vscode-descriptionForeground); font-size: 14px; gap: 8px; }
                     .empty-state svg { width: 48px; height: 48px; opacity: 0.4; }
@@ -2071,6 +2102,10 @@ class SkillsPanel {
                         <svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M2 3h12v1H2V3zm2 3h8v1H4V6zm-2 3h12v1H2V9zm2 3h8v1H4v-1z"/></svg>
                         <span>${t.dissolveGroupBtn || 'Dissolve Group'}</span>
                     </div>
+                    <div class="context-menu-item destructive" id="ctxDeleteGroup">
+                        <svg class="icon" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M14 3h-3V1H5v2H2v1h1v11h10V4h1V3zM6 2h4v1H6V2zm6 12H4V4h8v10z"/><path d="M6 6h1v6H6zm3 0h1v6H9z"/></svg>
+                        <span>${t.deleteGroupBtn || 'Delete Group'}</span>
+                    </div>
                 </div>
 
                 <script>
@@ -2148,13 +2183,21 @@ class SkillsPanel {
                         'Ungrouped': t.ungrouped || 'Ungrouped',
                         'smart.frontend': 'Frontend',
                         'smart.backend': 'Backend',
+                        'smart.mobile': 'Mobile',
+                        'smart.data': 'Data',
+                        'smart.database': 'Database',
                         'smart.devops': 'DevOps',
                         'smart.ai': 'AI',
                         'smart.testing': 'Testing',
                         'smart.design': 'Design',
                         'smart.docs': 'Docs',
+                        'smart.automation': 'Automation',
                         'smart.security': 'Security',
                         'smart.collab': 'Collaboration',
+                        'smart.product': 'Product',
+                        'smart.research': 'Research',
+                        'smart.localization': 'Localization',
+                        'smart.business': 'Business',
                         'smart.utilities': 'Utilities'
 	                    };
                         function isCompactLayout() {
@@ -3121,7 +3164,7 @@ class SkillsPanel {
                             return;
                         }
                         selectedGroups = new Set([groupName]);
-                        lastSelectedGroupName = groupName;
+                        lastSelectedGroupName = groupName; 
                         syncGroupSelectionVisuals();
                     }
                     function getVisibleGroupNames() {
@@ -3186,7 +3229,7 @@ class SkillsPanel {
                         return skillPath ? [skillPath] : [];
                     }
                     function getEditorDeleteTargetPaths(skillPath) {
-                        if (skillPath && selectedSkills.size > 1 && selectedSkills.has(skillPath)) {
+                        if (selectedSkills.size > 1) {
                             return getOrderedSkillPaths(Array.from(selectedSkills));
                         }
                         return skillPath ? [skillPath] : [];
@@ -3339,9 +3382,37 @@ class SkillsPanel {
 
                         // Delete
                         document.getElementById('deleteBtn').addEventListener('click', () => {
+                            if (selectedGroups.size > 0) {
+                                const targetGroupNames = Array.from(selectedGroups);
+                                const targetGroupSet = new Set(targetGroupNames);
+                                const targetSkills = skills.filter(function(sk) { return targetGroupSet.has(sk.group); });
+                                const deleteTitle = targetGroupNames.length > 1
+                                    ? (t.deleteGroupsBtn || t.deleteGroupBtn || 'Delete Groups')
+                                    : (t.deleteGroupBtn || 'Delete Group');
+                                const deleteMsg = targetGroupNames.length > 1
+                                    ? (t.deleteGroupsMsg || 'Are you sure you want to completely delete these groups and ALL their skills? This cannot be undone.')
+                                    : (t.deleteGroupMsg || 'Are you sure you want to completely delete this group and ALL its skills? This cannot be undone.');
+                                showConfirm(deleteTitle, deleteMsg, () => {
+                                    manualEmptyGroups = manualEmptyGroups.filter(function(groupName) { return !targetGroupSet.has(groupName); });
+                                    targetGroupNames.forEach(function(groupName) { collapsedGroups.delete(groupName); });
+                                    clearGroupSelection();
+                                    vscode.postMessage({ command: 'saveCollapsedGroups', collapsedGroups: Array.from(collapsedGroups) });
+                                    if (targetSkills.length > 0) {
+                                        vscode.postMessage({ command: 'deleteSkills', skillPaths: targetSkills.map(function(sk) { return sk.path; }) });
+                                    }
+                                    renderList();
+                                    persistOrdering();
+                                }, true);
+                                return;
+                            }
+
                             const targetPaths = getEditorDeleteTargetPaths(skill.path);
                             if (targetPaths.length === 0) return;
-                            showConfirm(t.deleteConfirmTitle, t.deleteMsg, () => {
+                            const title = targetPaths.length > 1 ? (t.deleteSkillsConfirmTitle || 'Delete Skills') : (t.deleteConfirmTitle || 'Delete Skill');
+                            const msg = targetPaths.length > 1
+                                ? (t.deleteSkillsMsg || 'Are you sure you want to permanently delete these {0} skills? This cannot be undone.').replace('{0}', targetPaths.length)
+                                : (t.deleteMsg || 'Are you sure you want to permanently delete this skill? This cannot be undone.');
+                            showConfirm(title, msg, () => {
                                 if (targetPaths.length === 1) {
                                     vscode.postMessage({ command: 'deleteSkill', skillPath: targetPaths[0] });
                                 } else {
@@ -3644,162 +3715,283 @@ class SkillsPanel {
                                 while ((p = text.indexOf(lower, p)) !== -1) { c++; p += lower.length; }
                                 return c;
                             }
-                            const categories = {
-                                'smart.security': [
-                                    'security', 'secure', 'vulnerability', 'exploit', 'attack', 'threat', 'threat model',
-                                    'pentest', 'penetration', 'encryption', 'decrypt', 'hash', 'crypto', 'certificate',
-                                    'ssl', 'tls', 'firewall', 'waf', 'xss', 'csrf', 'injection', 'sqli',
-                                    'access control', 'rbac', 'audit', 'compliance', 'cve', 'cwe', 'owasp',
-                                    'secret', 'credential', 'ownership', 'bus factor',
-                                    '安全', '漏洞', '加密', '解密', '防火墙', '防火牆', '威胁', '威脅', '审计', '審計', '权限', '許可權'
-                                ],
-                                'smart.testing': [
-                                    'test', 'testing', 'unit test', 'integration test', 'e2e', 'end-to-end',
-                                    'jest', 'vitest', 'mocha', 'chai', 'jasmine', 'cypress', 'selenium',
-                                    'playwright', 'puppeteer', 'qa', 'quality assurance',
-                                    'debug', 'debugging', 'debugger', 'breakpoint', 'coverage', 'assertion',
-                                    'mock', 'stub', 'spy', 'benchmark', 'load test', 'lint', 'eslint', 'prettier',
-                                    '测试', '測試', '调试', '調試', '除錯', 'bug', '质量', '品質', '单元测试', '單元測試'
-                                ],
-                                'smart.devops': [
-                                    'docker', 'dockerfile', 'container', 'kubernetes', 'k8s', 'helm',
-                                    'ci/cd', 'pipeline', 'github actions', 'gitlab ci',
-                                    'deploy', 'deployment', 'hosting', 'publish',
-                                    'aws', 'azure', 'gcp', 'cloud', 'cloudflare', 'netlify', 'vercel',
-                                    'render', 'heroku', 'railway', 'fly.io',
-                                    'terraform', 'ansible', 'pulumi', 'nginx', 'apache', 'caddy', 'proxy',
-                                    'load balancer', 'linux', 'ssh', 'systemd', 'cron',
-                                    'monitoring', 'logging', 'grafana', 'prometheus', 'sentry',
-                                    'infrastructure', 'scaling', 'cdn',
-                                    '运维', '維運', '部署', '容器', '云', '雲', '服务器', '伺服器', '发布', '發佈'
-                                ],
-                                'smart.ai': [
-                                    'machine learning', 'deep learning', 'neural network', 'ml', 'dl',
-                                    'artificial intelligence', 'data science',
-                                    'pandas', 'numpy', 'scipy', 'scikit', 'pytorch', 'tensorflow', 'keras', 'jax',
-                                    'llm', 'large language model', 'prompt', 'prompt engineering',
-                                    'openai', 'claude', 'anthropic', 'gemini', 'gpt', 'chatgpt',
-                                    'embedding', 'vector', 'rag', 'fine-tune', 'finetune', 'fine tuning',
-                                    'transformers', 'huggingface', 'hugging face',
-                                    'stable diffusion', 'midjourney', 'dall-e', 'dalle', 'sora',
-                                    'agent sdk', 'copilot', 'inference', 'training',
-                                    'nlp', 'natural language', 'computer vision',
-                                    'langchain', 'llamaindex', 'autogen',
-                                    'speech', 'transcribe', 'tts', 'stt', 'whisper', 'voice',
-                                    'chatbot', 'completion', 'token', 'tokenizer',
-                                    '模型', '大模型', '提示词', '提示詞', '智能', '人工智能',
-                                    '机器学习', '機器學習', '深度学习', '深度學習', '训练', '訓練', '推理',
-                                    '语音', '語音', '识别', '辨識'
-                                ],
-                                'smart.frontend': [
-                                    'javascript', 'js', 'typescript', 'ts', 'jquery', 'ajax',
-                                    'react', 'vue', 'angular', 'svelte', 'solid', 'preact',
-                                    'nextjs', 'next.js', 'nuxt', 'gatsby', 'remix', 'astro',
-                                    'html', 'css', 'sass', 'scss', 'less', 'tailwind', 'bootstrap',
-                                    'styled-components', 'emotion', 'css-in-js', 'css modules',
-                                    'webpack', 'vite', 'rollup', 'esbuild', 'parcel', 'turbopack',
-                                    'jsx', 'tsx', 'dom', 'component', 'responsive', 'browser',
-                                    'frontend', 'front-end', 'webapp', 'spa', 'pwa', 'shadcn',
-                                    'canvas', 'p5', 'three.js', 'threejs', 'webgl', 'svg', 'd3',
-                                    'gsap', 'framer', 'lottie',
-                                    'winui', 'xaml', 'blazor', 'electron', 'tauri',
-                                    'landing page', 'dashboard', 'layout', 'navigation',
-                                    '前端', '介面', '组件', '組件', '页面', '頁面', '网页', '網頁',
-                                    '样式', '樣式', '响应式', '響應式', '落地页', '落地頁'
-                                ],
-                                'smart.backend': [
-                                    'node', 'express', 'fastify', 'koa', 'nestjs', 'hapi',
-                                    'django', 'flask', 'fastapi', 'spring', 'springboot',
-                                    'ruby', 'rails', 'golang', 'gin', 'fiber',
-                                    'rust', 'actix', 'axum', 'php', 'laravel',
-                                    'api', 'rest', 'restful', 'graphql', 'grpc', 'websocket', 'webhook',
-                                    'backend', 'back-end', 'server', 'microservice', 'middleware',
-                                    'database', 'sql', 'postgres', 'postgresql', 'mysql', 'sqlite',
-                                    'mongodb', 'redis', 'elasticsearch', 'dynamodb', 'supabase', 'firebase',
-                                    'orm', 'prisma', 'sequelize', 'typeorm', 'drizzle',
-                                    'authentication', 'jwt', 'oauth', 'session', 'passport',
-                                    'mcp', 'mcp server', 'model context protocol',
-                                    'asp.net', 'aspnet', 'dotnet', 'csharp',
-                                    '后端', '後端', '数据库', '資料庫', '服务端', '伺服端',
-                                    '接口', '中间件', '中介層', '服务', '服務'
-                                ],
-                                'smart.design': [
-                                    'design', 'designer', 'ui design', 'ux design', 'ui/ux',
-                                    'figma', 'sketch', 'adobe', 'photoshop', 'illustrator',
-                                    'image', 'photo', 'picture', 'icon', 'logo', 'banner', 'poster',
-                                    'video', 'gif', 'motion', 'animation',
-                                    'art', 'artwork', 'generative art', 'algorithmic art', 'creative coding',
-                                    'asset', 'sprite', 'texture', 'mockup', 'wireframe', 'prototype',
-                                    'theme', 'color', 'palette', 'typography', 'font', 'brand',
-                                    'game', 'game dev', 'game design',
-                                    'screenshot', 'render', 'visual',
-                                    '设计', '設計', '图片', '圖片', '视觉', '視覺', '视频', '影片',
-                                    '美学', '美學', '画', '畫', '图标', '圖標', '动画', '動畫',
-                                    '海报', '海報', '游戏', '遊戲', '创意', '創意', '品牌', '主题', '主題'
-                                ],
-                                'smart.docs': [
-                                    'document', 'documentation', 'docs',
-                                    'writing', 'writer', 'draft', 'proofread', 'humanize', 'rewrite',
-                                    'readme', 'changelog', 'wiki',
-                                    'translate', 'translation', 'i18n', 'localization',
-                                    'article', 'blog', 'content writing',
-                                    'report', 'proposal', 'specification', 'rfc',
-                                    'slide', 'presentation', 'deck',
-                                    'docx', 'xlsx', 'pptx', 'pdf', 'csv', 'markdown',
-                                    'spreadsheet', 'excel', 'word', 'powerpoint',
-                                    'screenplay', 'storyline',
-                                    'notebook', 'jupyter', 'ipynb',
-                                    '文档', '文件', '写作', '寫作', '翻译', '翻譯', '文案', '文章',
-                                    '报告', '報告', '剧本', '劇本', '提案', '规范', '規範',
-                                    '演示', '簡報', '幻灯片', '幻燈片', '电子表格', '電子表格',
-                                    '漫剧', '连载', '連載', '小说', '小說'
-                                ],
-                                'smart.collab': [
-                                    'slack', 'discord', 'teams', 'zoom',
-                                    'notion', 'confluence', 'jira', 'linear', 'trello', 'asana',
-                                    'meeting', 'agenda', 'standup', 'retrospective',
-                                    'collaboration', 'workflow', 'project management',
-                                    'github', 'gitlab', 'bitbucket',
-                                    'pull request', 'code review', 'merge request',
-                                    'issue', 'ticket', 'kanban', 'scrum', 'agile',
-                                    'email', 'newsletter', 'notification',
-                                    'commit', 'branch', 'version control',
-                                    '协作', '協作', '沟通', '溝通', '会议', '會議',
-                                    '项目管理', '專案管理', '工作流', '通知', '代码审查', '程式碼審查'
-                                ],
-                                'smart.utilities': [
-                                    'utils', 'utility', 'utilities',
-                                    'scripting', 'automation', 'automate',
-                                    'toolkit', 'toolbox', 'helper', 'snippet',
-                                    'regex', 'regexp', 'regular expression',
-                                    'bash', 'shell', 'zsh', 'terminal', 'cli', 'command line',
-                                    'config', 'configuration', 'settings', 'preferences',
-                                    'migration', 'conversion', 'transform', 'parser', 'formatter',
-                                    'scheduler', 'cron job',
-                                    'file system', 'directory',
-                                    'rule', 'cursor rule', 'skill creator',
-                                    '工具', '脚本', '腳本', '正则', '正則', '辅助', '輔助',
-                                    '命令行', '终端', '終端', '配置', '設定', '自动化', '自動化'
-                                ]
-                            };
+                            const categoryConfigs = [
+                                {
+                                    key: 'smart.security',
+                                    minScore: 3,
+                                    keywords: [
+                                        'security', 'secure', 'vulnerability', 'exploit', 'attack', 'threat', 'threat model',
+                                        'pentest', 'penetration', 'encryption', 'decrypt', 'hash', 'crypto', 'certificate',
+                                        'ssl', 'tls', 'firewall', 'waf', 'xss', 'csrf', 'injection', 'sqli',
+                                        'access control', 'rbac', 'audit', 'compliance', 'cve', 'cwe', 'owasp',
+                                        'secret', 'credential', 'ownership', 'bus factor',
+                                        '安全', '漏洞', '加密', '解密', '防火墙', '防火牆', '威胁', '威脅', '审计', '審計', '权限', '許可權'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.testing',
+                                    minScore: 3,
+                                    keywords: [
+                                        'test', 'testing', 'unit test', 'integration test', 'e2e', 'end-to-end',
+                                        'jest', 'vitest', 'mocha', 'chai', 'jasmine', 'cypress', 'selenium',
+                                        'playwright', 'puppeteer', 'qa', 'quality assurance',
+                                        'debug', 'debugging', 'debugger', 'breakpoint', 'coverage', 'assertion',
+                                        'mock', 'stub', 'spy', 'load test', 'regression test',
+                                        '测试', '測試', '调试', '調試', '除錯', 'bug', '质量', '品質', '单元测试', '單元測試'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.devops',
+                                    minScore: 3,
+                                    keywords: [
+                                        'docker', 'dockerfile', 'container', 'kubernetes', 'k8s', 'helm',
+                                        'ci/cd', 'pipeline', 'github actions', 'gitlab ci',
+                                        'deploy', 'deployment', 'hosting', 'publish',
+                                        'aws', 'azure', 'gcp', 'cloud', 'cloudflare', 'netlify', 'vercel',
+                                        'render', 'heroku', 'railway', 'fly.io',
+                                        'terraform', 'ansible', 'pulumi', 'nginx', 'apache', 'caddy', 'proxy',
+                                        'load balancer', 'linux', 'ssh', 'systemd', 'cron',
+                                        'monitoring', 'logging', 'grafana', 'prometheus', 'sentry',
+                                        'infrastructure', 'scaling', 'cdn',
+                                        '运维', '維運', '部署', '容器', '云', '雲', '服务器', '伺服器', '发布', '發佈'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.ai',
+                                    minScore: 3,
+                                    keywords: [
+                                        'machine learning', 'deep learning', 'neural network', 'ml', 'dl',
+                                        'artificial intelligence', 'pytorch', 'tensorflow', 'keras', 'jax',
+                                        'llm', 'large language model', 'prompt', 'prompt engineering',
+                                        'openai', 'claude', 'anthropic', 'gemini', 'gpt', 'chatgpt',
+                                        'embedding', 'vector', 'rag', 'fine-tune', 'finetune', 'fine tuning',
+                                        'transformers', 'huggingface', 'hugging face',
+                                        'stable diffusion', 'midjourney', 'dall-e', 'dalle', 'sora',
+                                        'agent sdk', 'copilot', 'inference', 'training',
+                                        'nlp', 'natural language', 'computer vision',
+                                        'langchain', 'llamaindex', 'autogen',
+                                        'speech', 'transcribe', 'tts', 'stt', 'whisper', 'voice',
+                                        'chatbot', 'completion', 'token', 'tokenizer',
+                                        '模型', '大模型', '提示词', '提示詞', '智能', '人工智能',
+                                        '机器学习', '機器學習', '深度学习', '深度學習', '训练', '訓練', '推理',
+                                        '语音', '語音', '识别', '辨識'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.frontend',
+                                    minScore: 3,
+                                    keywords: [
+                                        'javascript', 'js', 'typescript', 'ts', 'jquery', 'ajax',
+                                        'react', 'vue', 'angular', 'svelte', 'solid', 'preact',
+                                        'nextjs', 'next.js', 'nuxt', 'gatsby', 'remix', 'astro',
+                                        'html', 'css', 'sass', 'scss', 'less', 'tailwind', 'bootstrap',
+                                        'styled-components', 'emotion', 'css-in-js', 'css modules',
+                                        'webpack', 'vite', 'rollup', 'esbuild', 'parcel', 'turbopack',
+                                        'jsx', 'tsx', 'dom', 'component', 'responsive', 'browser',
+                                        'frontend', 'front-end', 'webapp', 'spa', 'pwa', 'shadcn',
+                                        'canvas', 'p5', 'three.js', 'threejs', 'webgl', 'svg', 'd3',
+                                        'gsap', 'framer', 'lottie',
+                                        'winui', 'xaml', 'blazor', 'electron', 'tauri',
+                                        'landing page', 'dashboard', 'layout', 'navigation',
+                                        '前端', '介面', '组件', '組件', '页面', '頁面', '网页', '網頁',
+                                        '样式', '樣式', '响应式', '響應式', '落地页', '落地頁'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.backend',
+                                    minScore: 3,
+                                    keywords: [
+                                        'node', 'express', 'fastify', 'koa', 'nestjs', 'hapi',
+                                        'django', 'flask', 'fastapi', 'spring', 'springboot',
+                                        'ruby', 'rails', 'golang', 'gin', 'fiber',
+                                        'rust', 'actix', 'axum', 'php', 'laravel',
+                                        'api', 'rest', 'restful', 'graphql', 'grpc', 'websocket', 'webhook',
+                                        'backend', 'back-end', 'server', 'microservice', 'middleware',
+                                        'authentication', 'jwt', 'oauth', 'session', 'passport',
+                                        'serverless', 'lambda', 'edge function',
+                                        'mcp', 'mcp server', 'model context protocol',
+                                        'asp.net', 'aspnet', 'dotnet', 'csharp',
+                                        '后端', '後端', '服务端', '伺服端', '接口', '中间件', '中介層', '服务', '服務'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.mobile',
+                                    minScore: 3,
+                                    keywords: [
+                                        'mobile', 'ios', 'android', 'react native', 'expo', 'flutter', 'dart',
+                                        'swift', 'swiftui', 'objective-c', 'kotlin', 'jetpack compose',
+                                        'xcode', 'android studio', 'apk', 'ipa', 'app store', 'play store',
+                                        'tablet', 'phone app',
+                                        '移动端', '移動端', '移动开发', '行動開發', '安卓', '苹果', '蘋果'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.data',
+                                    minScore: 3,
+                                    keywords: [
+                                        'data pipeline', 'etl', 'elt', 'analytics', 'analyst',
+                                        'business intelligence', 'warehouse', 'data warehouse', 'lakehouse',
+                                        'bigquery', 'snowflake', 'redshift', 'spark', 'hadoop', 'airflow', 'dbt',
+                                        'dataset', 'dataframe', 'parquet', 'tableau', 'power bi', 'metabase',
+                                        'pandas', 'numpy', 'jupyter', 'notebook', 'ipynb', 'metrics', 'kpi',
+                                        '数据分析', '數據分析', '数据管道', '數據管道', '报表', '報表', '指标', '指標'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.database',
+                                    minScore: 3,
+                                    keywords: [
+                                        'database', 'databases', 'sql', 'query', 'queries', 'schema', 'index',
+                                        'postgres', 'postgresql', 'mysql', 'sqlite', 'mariadb', 'mongodb',
+                                        'redis', 'elasticsearch', 'dynamodb', 'supabase', 'firebase',
+                                        'orm', 'prisma', 'sequelize', 'typeorm', 'drizzle', 'migration',
+                                        'sqlalchemy', 'vector database', 'pinecone', 'weaviate', 'qdrant', 'milvus',
+                                        '数据库', '資料庫', '查询', '查詢', '索引', '迁移', '遷移'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.design',
+                                    minScore: 3,
+                                    keywords: [
+                                        'design', 'designer', 'ui design', 'ux design', 'ui/ux',
+                                        'figma', 'sketch', 'adobe', 'photoshop', 'illustrator',
+                                        'icon', 'logo', 'banner', 'poster', 'motion', 'animation',
+                                        'art', 'artwork', 'generative art', 'algorithmic art', 'creative coding',
+                                        'asset', 'sprite', 'texture', 'mockup', 'wireframe', 'prototype',
+                                        'theme', 'color', 'palette', 'typography', 'font', 'brand',
+                                        'game', 'game dev', 'game design',
+                                        '设计', '設計', '图片', '圖片', '视觉', '視覺', '视频', '影片',
+                                        '美学', '美學', '画', '畫', '图标', '圖標', '动画', '動畫',
+                                        '海报', '海報', '游戏', '遊戲', '创意', '創意', '品牌', '主题', '主題'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.docs',
+                                    minScore: 3,
+                                    keywords: [
+                                        'document', 'documentation', 'docs',
+                                        'writing', 'writer', 'draft', 'proofread', 'humanize', 'rewrite',
+                                        'readme', 'changelog', 'wiki', 'guide', 'manual', 'tutorial', 'reference',
+                                        'article', 'blog', 'content writing',
+                                        'report', 'specification', 'rfc',
+                                        'slide', 'presentation', 'deck',
+                                        'docx', 'xlsx', 'pptx', 'pdf', 'csv', 'markdown',
+                                        'spreadsheet', 'excel', 'word', 'powerpoint',
+                                        'screenplay', 'storyline',
+                                        '文档', '文件', '写作', '寫作', '文案', '文章',
+                                        '报告', '報告', '剧本', '劇本', '提案', '规范', '規範',
+                                        '演示', '簡報', '幻灯片', '幻燈片', '电子表格', '電子表格',
+                                        '漫剧', '连载', '連載', '小说', '小說'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.automation',
+                                    minScore: 3,
+                                    keywords: [
+                                        'automation', 'automate', 'workflow automation', 'bot', 'bots',
+                                        'orchestration', 'orchestrate', 'scheduler', 'scheduled', 'cron',
+                                        'job runner', 'batch job', 'trigger', 'macro', 'repetitive task',
+                                        'n8n', 'zapier', 'make.com', 'ifttt', 'workflow engine',
+                                        '自动化', '自動化', '调度', '調度', '编排', '編排', '机器人', '機器人'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.collab',
+                                    minScore: 3,
+                                    keywords: [
+                                        'slack', 'discord', 'teams', 'zoom',
+                                        'notion', 'confluence', 'jira', 'linear', 'trello', 'asana',
+                                        'meeting', 'agenda', 'standup', 'retrospective',
+                                        'collaboration', 'project management',
+                                        'pull request', 'code review', 'merge request',
+                                        'issue', 'ticket', 'kanban', 'scrum', 'agile', 'stakeholder sync',
+                                        '协作', '協作', '沟通', '溝通', '会议', '會議',
+                                        '项目管理', '專案管理', '代码审查', '程式碼審查'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.product',
+                                    minScore: 3,
+                                    keywords: [
+                                        'product', 'prd', 'roadmap', 'requirements', 'requirement',
+                                        'user story', 'acceptance criteria', 'backlog', 'prioritization',
+                                        'feature brief', 'release plan', 'milestone', 'product strategy',
+                                        '产品', '產品', '路线图', '路線圖', '需求', '用户故事', '使用者故事', '验收标准', '驗收標準'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.research',
+                                    minScore: 3,
+                                    keywords: [
+                                        'research', 'researcher', 'paper', 'arxiv', 'literature review',
+                                        'benchmark', 'evaluation', 'evaluate', 'experiment', 'survey',
+                                        'comparison', 'compare', 'feasibility', 'investigate', 'discovery',
+                                        'competitive analysis', 'market research',
+                                        '研究', '调研', '調研', '论文', '論文', '评估', '評估', '实验', '實驗', '对比', '對比'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.localization',
+                                    minScore: 3,
+                                    keywords: [
+                                        'translate', 'translation', 'translator', 'localization', 'localisation',
+                                        'i18n', 'l10n', 'locale', 'multilingual', 'glossary', 'subtitle',
+                                        'transcreation', 'bilingual',
+                                        '翻译', '翻譯', '本地化', '在地化', '多语言', '多語言', '术语', '術語', '字幕'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.business',
+                                    minScore: 3,
+                                    keywords: [
+                                        'business', 'marketing', 'growth', 'sales', 'crm', 'seo', 'sem',
+                                        'campaign', 'customer', 'client', 'lead', 'funnel', 'pricing',
+                                        'internal comms', 'stakeholder update', 'bizops', 'business operations', 'support',
+                                        'commercial', 'go-to-market',
+                                        '商业', '商業', '营销', '行销', '增长', '增長', '销售', '銷售', '客户', '客戶', '内宣', '內宣'
+                                    ]
+                                },
+                                {
+                                    key: 'smart.utilities',
+                                    minScore: 3,
+                                    keywords: [
+                                        'utils', 'utility', 'utilities',
+                                        'toolkit', 'toolbox', 'helper', 'snippet',
+                                        'regex', 'regexp', 'regular expression',
+                                        'bash', 'shell', 'zsh', 'terminal', 'cli', 'command line',
+                                        'config', 'configuration', 'settings', 'preferences',
+                                        'migration', 'conversion', 'transform', 'parser', 'formatter',
+                                        'file system', 'directory', 'path', 'boilerplate', 'scaffold',
+                                        'rule', 'cursor rule', 'skill creator',
+                                        '工具', '脚本', '腳本', '正则', '正則', '辅助', '輔助',
+                                        '命令行', '终端', '終端', '配置', '設定'
+                                    ]
+                                }
+                            ];
                             var updated = 0;
                             var updates = [];
                             skills.forEach(function(skill) {
                                 if (isUngrouped(skill.group)) {
                                     var nameDesc = (skill.name + ' ' + (skill.description || '')).toLowerCase();
                                     var body = (skill.content || '').toLowerCase();
-                                    var bestGroup = '';
-                                    var maxScore = 0;
-                                    for (var cat in categories) {
+                                    var bestMatch = null;
+                                    var secondBestScore = 0;
+                                    categoryConfigs.forEach(function(category) {
                                         var score = 0;
-                                        categories[cat].forEach(function(kw) {
+                                        category.keywords.forEach(function(kw) {
                                             score += kwCount(nameDesc, kw) * 5 + kwCount(body, kw);
                                         });
-                                        if (score > maxScore) { maxScore = score; bestGroup = cat; }
-                                    }
-                                    if (maxScore >= 2 && bestGroup) {
-                                        skill.group = bestGroup;
-                                        updates.push({ skillPath: skill.path, group: bestGroup });
+                                        if (!bestMatch || score > bestMatch.score) {
+                                            secondBestScore = bestMatch ? Math.max(secondBestScore, bestMatch.score) : secondBestScore;
+                                            bestMatch = { key: category.key, score: score, minScore: category.minScore || 2 };
+                                        } else if (score > secondBestScore) {
+                                            secondBestScore = score;
+                                        }
+                                    });
+                                    var confidenceGap = bestMatch && bestMatch.score >= 12 ? 1 : 2;
+                                    if (bestMatch && bestMatch.score >= bestMatch.minScore && bestMatch.score >= secondBestScore + confidenceGap) {
+                                        skill.group = bestMatch.key;
+                                        updates.push({ skillPath: skill.path, group: bestMatch.key });
                                         updated++;
                                     }
                                 }
@@ -3921,8 +4113,26 @@ class SkillsPanel {
                         if (skillTarget) {
                             ctxSkillIndex = parseInt(skillTarget.getAttribute('data-index'));
                             var clickedSkill = skills[ctxSkillIndex];
-                            if (clickedSkill && selectedSkills.size > 0 && !selectedSkills.has(clickedSkill.path)) {
+                            var skillSelectionChanged = false;
+                            if (selectedGroups.size > 0) {
+                                clearGroupSelection();
+                                skillSelectionChanged = true;
+                            }
+                            if (clickedSkill) {
+                                const keepExistingSkillSelection = selectedSkills.size > 1 && selectedSkills.has(clickedSkill.path);
+                                if (!keepExistingSkillSelection) {
+                                    const alreadyOnlyClickedSkill = selectedSkills.size === 1 && selectedSkills.has(clickedSkill.path);
+                                    if (!alreadyOnlyClickedSkill) {
+                                        selectedSkills.clear();
+                                        selectedSkills.add(clickedSkill.path);
+                                        skillSelectionChanged = true;
+                                    }
+                                }
+                            } else if (selectedSkills.size > 0) {
                                 selectedSkills.clear();
+                                skillSelectionChanged = true;
+                            }
+                            if (skillSelectionChanged) {
                                 renderList();
                             }
                             var removeBtn = document.getElementById('ctxRemoveFromGroup');
@@ -3959,23 +4169,49 @@ class SkillsPanel {
                         if (groupHeaderTarget) {
                             ctxGroupName = groupHeaderTarget.parentElement.getAttribute('data-group');
                             if (isUngrouped(ctxGroupName)) return;
+                            var groupSelectionChanged = false;
+                            if (selectedSkills.size > 0) {
+                                selectedSkills.clear();
+                                groupSelectionChanged = true;
+                            }
+                            const keepExistingGroupSelection = selectedGroups.size > 1 && selectedGroups.has(ctxGroupName);
+                            const alreadyOnlyClickedGroup = selectedGroups.size === 1 && selectedGroups.has(ctxGroupName);
+                            if (!keepExistingGroupSelection && !alreadyOnlyClickedGroup) {
+                                clearGroupSelection();
+                                selectedGroups.add(ctxGroupName);
+                                lastSelectedGroupName = ctxGroupName;
+                                groupSelectionChanged = true;
+                            }
+                            if (groupSelectionChanged) {
+                                renderList();
+                            }
                             var contextGroupTargets = getContextGroupTargets();
                             var contextGroupSet = new Set(contextGroupTargets);
                             var groupSkillCount = skills.filter(function(s) { return contextGroupSet.has(s.group); }).length;
                             var renameGroupBtn = document.getElementById('ctxRenameGroup');
                             var dissolveBtn = document.getElementById('ctxDissolveGroup');
+                            var deleteGroupBtn = document.getElementById('ctxDeleteGroup');
+
                             if (renameGroupBtn) renameGroupBtn.style.display = contextGroupTargets.length > 1 ? 'none' : 'flex';
                             if (dissolveBtn) {
                                 var span = dissolveBtn.querySelector('span');
                                 if (groupSkillCount === 0) {
-                                    if (span) span.textContent = contextGroupTargets.length > 1
-                                        ? (t.deleteGroupsBtn || t.deleteGroupBtn || 'Delete Groups')
-                                        : (t.deleteGroupBtn || 'Delete Group');
+                                    dissolveBtn.style.display = 'none';
                                 } else {
+                                    dissolveBtn.style.display = 'flex';
                                     if (span) span.textContent = contextGroupTargets.length > 1
                                         ? (t.dissolveGroupsBtn || t.dissolveGroupBtn || 'Dissolve Groups')
                                         : (t.dissolveGroupBtn || 'Ungroup All');
                                 }
+                            }
+                            if (deleteGroupBtn) {
+                                var deleteSpan = deleteGroupBtn.querySelector('span');
+                                if (deleteSpan) {
+                                    deleteSpan.textContent = contextGroupTargets.length > 1
+                                        ? (t.deleteGroupsBtn || t.deleteGroupBtn || 'Delete Groups')
+                                        : (t.deleteGroupBtn || 'Delete Group');
+                                }
+                                deleteGroupBtn.style.display = 'flex';
                             }
                             showCtxMenu(groupCtxMenu, e.clientX, e.clientY);
                             return;
@@ -4177,6 +4413,38 @@ class SkillsPanel {
                             commitLayout(updates);
                         }, true);
                     });
+
+                    const deleteGroupBtnEl = document.getElementById('ctxDeleteGroup');
+                    if (deleteGroupBtnEl) {
+                        deleteGroupBtnEl.addEventListener('click', () => {
+                            hideCtxMenus();
+                            const targetGroupNames = getContextGroupTargets();
+                            if (targetGroupNames.length === 0) return;
+                            const targetGroupSet = new Set(targetGroupNames);
+                            const targetSkills = skills.filter(function(skill) { return targetGroupSet.has(skill.group); });
+
+                            const deleteTitle = targetGroupNames.length > 1
+                                ? (t.deleteGroupsBtn || t.deleteGroupBtn || 'Delete Groups')
+                                : (t.deleteGroupBtn || 'Delete Group');
+                            const deleteMsg = targetGroupNames.length > 1
+                                ? (t.deleteGroupsMsg || 'Are you sure you want to completely delete these groups and ALL their skills? This cannot be undone.')
+                                : (t.deleteGroupMsg || 'Are you sure you want to completely delete this group and ALL its skills? This cannot be undone.');
+
+                            showConfirm(deleteTitle, deleteMsg, () => {
+                                manualEmptyGroups = manualEmptyGroups.filter(function(groupName) { return !targetGroupSet.has(groupName); });
+                                targetGroupNames.forEach(function(groupName) { collapsedGroups.delete(groupName); });
+                                clearGroupSelection();
+                                vscode.postMessage({ command: 'saveCollapsedGroups', collapsedGroups: Array.from(collapsedGroups) });
+
+                                if (targetSkills.length > 0) {
+                                    vscode.postMessage({ command: 'deleteSkills', skillPaths: targetSkills.map(function(sk) { return sk.path; }) });
+                                }
+                                renderList();
+                                persistOrdering();
+                            }, true);
+                        });
+                    }
+
                     document.getElementById('cancelRenameGroupBtn').addEventListener('click', closeRenameGroupModal);
                     document.getElementById('renameGroupModal').addEventListener('click', (e) => { if (e.target === document.getElementById('renameGroupModal')) closeRenameGroupModal(); });
                     document.getElementById('confirmRenameGroupBtn').addEventListener('click', () => {
@@ -4681,13 +4949,14 @@ class SkillsPanel {
                                 if (groupName) {
                                     const rangeGroupNames = getVisibleGroupRange(lastSelectedGroupName, groupName);
                                     selectedGroups = new Set(rangeGroupNames);
-                                    lastSelectedGroupName = groupName;
+                                    /* keep anchor: lastSelectedGroupName = groupName; */
                                     syncGroupSelectionVisuals();
                                 }
                                 return;
                             }
 
-                            if (header && !item && (e.metaKey || e.ctrlKey)) {
+                            const isMac = typeof navigator !== 'undefined' && navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+                            if (header && !item && (e.metaKey || (!isMac && e.ctrlKey))) {
                                 e.preventDefault();
                                 const groupName = header.parentElement.getAttribute('data-group');
                                 if (groupName) {
