@@ -26,21 +26,66 @@ There are **3 easy ways** to launch the Ultra Skills Editor:
 
 ### Smart Grouping
 
-| Preview | What it does |
-|---|---|
-| <img src="https://raw.githubusercontent.com/Michael-IT001/ultra-skills-editor/main/media/smart-grouping.png" alt="Smart Grouping button inside Ultra Skills Editor" width="240" /> | **Clean up a messy skill library in one click.**<br><br>Smart Grouping automatically sorts ungrouped skills into practical sections such as Frontend, Backend, AI, Testing, and Docs.<br><br>- Useful right after large imports.<br>- Keeps the sidebar readable with visible group counts.<br>- Works naturally with later drag-and-drop refinement. |
+<table>
+  <tr>
+    <th align="left">Preview</th>
+    <th align="left">What it does</th>
+  </tr>
+  <tr>
+    <td valign="top" width="260">
+      <img src="https://raw.githubusercontent.com/Michael-IT001/ultra-skills-editor/main/media/smart-grouping.png" alt="Smart Grouping button inside Ultra Skills Editor" width="240" />
+    </td>
+    <td valign="top">
+      <strong>Clean up a messy skill library in one click.</strong><br><br>
+      Smart Grouping automatically sorts ungrouped skills into practical sections such as Frontend, Backend, AI, Testing, and Docs.<br><br>
+      - Useful right after large imports.<br>
+      - Keeps the sidebar readable with visible group counts.<br>
+      - Works naturally with later drag-and-drop refinement.
+    </td>
+  </tr>
+</table>
 
 ### Batch `@` Copy + Favorites
 
-| Preview | What it does |
-|---|---|
-| <img src="https://raw.githubusercontent.com/Michael-IT001/ultra-skills-editor/main/media/clipboard-favorites.png" alt="Selected skills with batch @ copy and favorite stars" width="240" /> | **Reuse your best skills faster.**<br><br>Select multiple skills with the `@` cart workflow to copy them into the clipboard as markdown-ready references, then star important ones to keep them close at hand.<br><br>- Batch copy selected skills for chat or prompt building.<br>- Favorite high-value skills for quick recall.<br>- Combine with **Recent / Favorite / Global / Project** filters for faster browsing. |
+<table>
+  <tr>
+    <th align="left">Preview</th>
+    <th align="left">What it does</th>
+  </tr>
+  <tr>
+    <td valign="top" width="260">
+      <img src="https://raw.githubusercontent.com/Michael-IT001/ultra-skills-editor/main/media/clipboard-favorites.png" alt="Selected skills with batch @ copy and favorite stars" width="240" />
+    </td>
+    <td valign="top">
+      <strong>Reuse your best skills faster.</strong><br><br>
+      Select multiple skills with the `@` cart workflow to copy them into the clipboard as markdown-ready references, then star important ones to keep them close at hand.<br><br>
+      - Batch copy selected skills for chat or prompt building.<br>
+      - Favorite high-value skills for quick recall.<br>
+      - Combine with <strong>Recent / Favorite / Global / Project</strong> filters for faster browsing.
+    </td>
+  </tr>
+</table>
 
 ### Batch Import with Destination Choice
 
-| Preview | What it does |
-|---|---|
-| <img src="https://raw.githubusercontent.com/Michael-IT001/ultra-skills-editor/main/media/batch-import-destination.png" alt="Batch import modal with Global and Project destination choice" width="240" /> | **Import in bulk without losing control.**<br><br>Drop in multiple files or folders, preview how many skills will be created, choose how to handle naming conflicts, and decide whether the import should be saved as **Global** or only for the **current project**.<br><br>- Supports drag-and-drop and toolbar import.<br>- Shows a batch preview before committing.<br>- Lets you choose the destination per import session. |
+<table>
+  <tr>
+    <th align="left">Preview</th>
+    <th align="left">What it does</th>
+  </tr>
+  <tr>
+    <td valign="top" width="260">
+      <img src="https://raw.githubusercontent.com/Michael-IT001/ultra-skills-editor/main/media/batch-import-destination.png" alt="Batch import modal with Global and Project destination choice" width="240" />
+    </td>
+    <td valign="top">
+      <strong>Import in bulk without losing control.</strong><br><br>
+      Drop in multiple files or folders, preview how many skills will be created, choose how to handle naming conflicts, and decide whether the import should be saved as <strong>Global</strong> or only for the <strong>current project</strong>.<br><br>
+      - Supports drag-and-drop and toolbar import.<br>
+      - Shows a batch preview before committing.<br>
+      - Lets you choose the destination per import session.
+    </td>
+  </tr>
+</table>
 
 ---
 
