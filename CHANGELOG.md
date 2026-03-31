@@ -1,3 +1,25 @@
+## v2.8.38
+- **Release Metadata Synced**: Bumped the extension to `2.8.38` and completed the recent changelog entries so the package metadata now matches the shipped feature set without changing `2.8.37` functionality.
+
+## v2.8.37
+- **16-Language Smart Grouping Labels Completed**: Added full localized names for the newly introduced smart grouping categories across all 16 shipped interface languages.
+
+## v2.8.36
+- **Editor Side Padding Tightened Again**: Reduced the editor’s horizontal gutter one more step so text sits slightly closer to both borders while keeping the left and right spacing symmetrical.
+
+## v2.8.35
+- **Editor Gutters Brought Inward**: Pulled both editor side paddings in a bit to reduce unused empty space without making the writing area feel cramped.
+
+## v2.8.34
+- **Editor Padding Rebalanced Symmetrically**: Removed the one-sided compensation approach and switched the editor to stable, mirrored left and right gutters for a more even reading layout.
+
+## v2.8.33
+- **Initial Editor Margin Rework**: Reworked the editor padding model to move the writing column inward with a more deliberate centered layout for long-form skill editing.
+
+## v2.8.32
+- **Smart Grouping Expanded To 18 + Ungrouped**: Upgraded smart grouping from the older broad buckets to a richer 18-category system, including Mobile, Data, Database, Automation, Product, Research, Localization, and Business.
+- **Safer Classification Logic**: Tightened the grouping scorer so ambiguous skills are more likely to stay in `Ungrouped` instead of being forced into the wrong category.
+
 ## v2.8.4
 - **Routine Maintenance**: General performance optimizations, stability improvements, and documentation updates.
 

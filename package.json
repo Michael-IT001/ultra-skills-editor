@@ -3,7 +3,7 @@
 	"displayName": "Ultra Skills Editor",
 	"description": "A beautifully crafted, multi-language skills management extension for VS Code, Cursor, Trae (Global & CN), Windsurf, Antigravity, Qoder, and CodeBuddy. Create, edit, and organize AI skills.",
 	"publisher": "Michael-IT001",
-	"version": "2.8.37",
+	"version": "2.8.38",
 	"icon": "media/icon.png",
 	"engines": {
 		"vscode": "^1.60.0"
